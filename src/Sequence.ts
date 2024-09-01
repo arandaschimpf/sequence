@@ -26,3 +26,15 @@ export interface ISequence {
   value3: number
   isSolution(candidate: number): boolean
 }
+
+
+
+export class FibonacciSequence extends Sequence {
+  constructor() {
+    super()
+    this.values[0] = 0;
+    this.values[1] = 1;
+    this.values[2] = this.values[0] + this.values[1];
+    this.values[3] = this.values[1] + this.values[2];
+}
+}

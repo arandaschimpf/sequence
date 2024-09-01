@@ -1,7 +1,7 @@
 import Sequence from "../Sequence";
 import Random from "../utils/Random";
 
-export default class NormalSequence extends Sequence {
+export default class PistonSequenceI6 extends Sequence {
   constructor() {
     super();
     const order = [1, 5, 3, 6, 2, 4] // Piston firing order for a inline 6 engine

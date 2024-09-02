@@ -1,6 +1,6 @@
 import Sequence from "../Sequence";
-import fs from 'fs'
-
+//import fs from 'fs'
+import * as fs from 'fs';
 export default class SequenceFactory {
   static async create() {
     const sequences = fs.readdirSync('./src/sequences')

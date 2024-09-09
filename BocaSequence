@@ -1,0 +1,23 @@
+import Sequence from "../Sequence";
+import Random from "../utils/Random";
+
+export default class BocaSequence extends Sequence
+{
+    constructor()
+    {
+        super();
+
+        const champions_years = [1977, 1978, 2000, 2001, 2003, 2007];
+
+        const missing_year = Random.get() % (champions_years.length - 2) + 1;
+
+        this.values = 
+        [
+            champions_years[missing_year - 1],
+            champions_years[missing_year], 
+            champions_years[missing_year + 1],
+            champions_years[missing_year + 2]
+        ]
+
+    }
+}

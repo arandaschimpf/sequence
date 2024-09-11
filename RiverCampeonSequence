@@ -1,0 +1,23 @@
+import Sequence from "../Sequence";
+import Random from "../utils/Random";
+
+export default class RiverCampeonSequence extends Sequence
+{
+    constructor()
+    {
+        super();
+
+        const champions_years = [1986, 1996, 2015, 2018, 2024];
+
+        const missing_year = Random.get() % (champions_years.length - 2) + 1;
+
+        this.values = 
+        [
+            champions_years[missing_year - 1],
+            champions_years[missing_year], 
+            champions_years[missing_year + 1],
+            champions_years[missing_year + 2]
+        ]
+
+    }
+}

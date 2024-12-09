@@ -1,28 +1,21 @@
-export default abstract class Sequence implements ISequence {
-  protected values: [number, number, number, number] = [0, 0, 0, 0]
+class ArithmeticSequence {
+  private start: number;
+  private difference: number;
+  private length: number;
 
-  constructor() {}
-
-  get value0() {
-    return this.values[0]
+  constructor(start: number, difference: number, length: number) {
+      this.start = start;
+      this.difference = difference;
+      this.length = length;
   }
 
-  get value1() {
-    return this.values[1]
-  }
+  public generateSequence(): number[] {
+      const sequence: number[] = [];
 
-  get value3() {
-    return this.values[3]
-  }
+      for (let i = 0; i < this.length; i++) {
+          sequence.push(this.start + i * this.difference);
+      }
 
-  isSolution(candidate: number) {
-    return this.values[2] === candidate
+      return sequence;
   }
-}
-
-export interface ISequence {
-  value0: number
-  value1: number
-  value3: number
-  isSolution(candidate: number): boolean
 }
